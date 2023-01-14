@@ -1,0 +1,456 @@
+.CONTENEDOR-PRINCIPAL {
+    background: #F3F5FC;
+    position: relative;
+    width: 1440px;
+    height: 850px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+
+}
+body {
+    zoom:90%;
+}
+
+.fondo {
+    background: #F3F5FC;
+}
+
+.color {
+    background-color: #0A3871;
+    color: #FFffff;
+    width: 450px;
+    height: 67px;
+    background: #0A3871;
+    border-radius: 24px;
+    font-size: 25px;
+}
+
+.CONTENEDOR-BOTONES {
+    position: absolute;
+    left: 240px;
+    top: 740px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+
+
+.color1 {
+    background-color: #F3F5FC;
+    color: #0A3871;
+    width: 450px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-size: 25px;
+}
+
+.CONTENEDOR-SECUNDARIO {
+    position: absolute;
+    width: 400px;
+    height: 790px;
+    left: 1250px;
+    top: 25px;
+    background-color: white;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.CONTENEDOR-PRIMARIO {
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    color: #0A3871;
+}
+
+.CONTENEDOR-TEXTAREA-COPIAR {
+    position: absolute;
+    width: 336px;
+    height: 680px;
+    left: 32px;
+    top: 17px;
+    color: #495057;
+    border-left: white;
+    border-bottom: white;
+    border-color: white;
+    border-top: white;
+    outline: none;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.ICONO1 {
+    position: absolute;
+    width: 20px;
+    height: 16px;
+    top: 35px;
+    left: -25px;
+}
+
+.CONTENEDOR-TEXTAREA-PRINCIPAL {
+    position: absolute;
+    width: 850px;
+    height: 288px;
+    left: 168;
+    top: 10px;
+    color: #0A3871;
+    background-color: #F3F5FC;
+    border-left: #F3F5FC;
+    border-bottom: #F3F5FC;
+    border-color: #F3F5FC;
+    border-top: #F3F5FC;
+    outline: none;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.tipo-color {
+    color: #0A3871;
+    line-height: 200%;
+}
+
+.color2 {
+    position: absolute;
+    background-color: white;
+    color: #0A3871;
+    width: 328px;
+    height: 67px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    box-sizing: border-box;
+    top: 560px;
+    left: -5px;
+}
+
+.img {
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 30px;
+}
+
+.ADVERTENCIA {
+    position: absolute;
+    top: 660px;
+    left: 264px;
+}
+
+
+.color3 {
+    width: 500px;
+    height: 18px;
+    color: #495057;
+    font-size: 25px;
+    line-height: 150%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.color4 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.IMAGE2 {
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 276px;
+}
+
+.CONTENEDOR-IMAGEN2 {
+    position: absolute;
+    top: 180px;
+    left: 1290px;
+}
+
+.CONTENEDOR-MENSAJE {
+    position: absolute;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    width: 336px;
+    height: 58px;
+    text-align: center;
+    top: 312px;
+}
+
+.CONTENEDOR-MENSAJE1 {
+    position: absolute;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    width: 336px;
+    height: 58px;
+    text-align: center;
+    top: 336px;
+}
+
+.CONTENEDOR-MENSAJE2 {
+    position: absolute;
+    width: 336px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    top: 365px;
+    text-align: center;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0
+}
+
+.CONTENEDOR-MJ2 {
+    position: absolute;
+    width: 336px;
+    height: 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    top: 384px;
+    text-align: center;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .CONTENEDOR-BOTONES {
+        position: absolute;
+        left: 50px;
+        top: 870px;
+        width: 700px;
+        height: 288px;
+    }
+
+    .CONTENEDOR-PRIMARIO {
+        left: 40px;
+        top: 200px;
+        width: 688px;
+        height: 288px;
+    }
+
+    .CONTENEDOR-PRINCIPAL {
+        width: 768px;
+        height: 1384px;
+    }
+
+    .CONTENEDOR-SECUNDARIO {
+        width: 688px;
+        height: 343px;
+        left: 40px;
+        top: 1000px;
+    }
+
+    .CONTENEDOR-TEXTAREA-COPIAR {
+        width: 624px;
+        height: 180px;
+    }
+
+    .CONTENEDOR-IMAGEN2 {
+        left: 75px;
+        top: 780px;
+    }
+
+    .color2 {
+        width: 664px;
+        top: 480px;
+    }
+
+    .ADVERTENCIA {
+        left: 80px;
+        top: 830px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    .img {
+        left: 2px;
+        top: 74px;
+    }
+
+    .CONTENEDOR-MENSAJE {
+        width: 624px;
+        height: 29px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        left: 5px;
+    }
+
+    .CONTENEDOR-MENSAJE1 {
+        position: absolute;
+        width: 624px;
+        height: 29px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+    }
+
+    .CONTENEDOR-MENSAJE1 {
+        position: absolute;
+        width: 624px;
+        height: 29px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+    }
+
+    .CONTENEDOR-MENSAJE2 {
+        width: 624px;
+        height: 29px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .CONTENEDOR-MJ2 {
+        width: 624px;
+        height: 29px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .IMAGE2 {
+        opacity: 0;
+    }
+
+    .fondo {
+        width: 768px;
+         height: 1174px;
+    }
+
+    .color {
+        width: 325px;
+        height: 67px;
+    }
+
+    .color1 {
+        width: 325px;
+        height: 67px;
+    }
+
+    .CONTENEDOR-TEXTAREA-PRINCIPAL {
+        width: 690px;
+        height: 288px;
+    }
+
+    .color3 {
+        width: 300px;
+        font-size: 15px;
+    }
+
+    .ADVERTENCIA {
+        position: absolute;
+        top: 820px;
+    }
+    
+    .ICONO1 {
+        top: 17px;
+    }
+   
+
+
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background: aqua;
+    }
+
+    .img {
+        left: -20px;
+    }
+
+
+    .CONTENEDOR-BOTONES {
+        left: 15px;
+        top: 890px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 24px;
+
+    }
+
+    .ADVERTENCIA {
+        left: 44px;
+        top: 835px;
+    }
+
+    .ICONO1 {
+        top: 17px;
+    }
+
+    .color {
+        width: 343px;
+        font-size: 15px;
+    }
+
+    .color1 {
+        width: 343px;
+        font-size: 15px;
+    }
+
+    .color2 {
+        width: 279px;
+        height: 67px;
+        top: 560px;
+        left: 28px;
+    }
+
+    .color3 {
+        font-size: 15px;
+    }
+
+    .CONTENEDOR-TEXTAREA-PRINCIPAL {
+        width: 329px;
+        height: 624px;
+        left: -220px;
+        font-size: 25px;
+    }
+
+    .CONTENEDOR-SECUNDARIO {
+        width: 343px;
+        height: 550px;
+        left: 15px;
+        top: 1150px;
+    }
+
+    .CONTENEDOR-TEXTAREA-COPIAR {
+        width: 290px;
+        height: 400px;
+    }
+
+    .IMAGE2 {
+        opacity: 0;
+    }
+
+    .CONTENEDOR-IMAGEN2 {
+        top: 1050px;
+        left: 20px;
+    }
+
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1, maximum-scale=1.0,maximum-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body class="fondo">
+    <div class="CONTENEDOR-PRINCIPAL">
+        <img src="./a.png" class="img">
+
+        <div class="CONTENEDOR-PRIMARIO">
+            <textarea id="txtencriptar" name="mensaje" placeholder="Ingrese el texto aqui"
+                oninput="this.value = this.value.replace(/[A-Z]/,'')" onkeypress="return  sololetras(event)"
+                class="CONTENEDOR-TEXTAREA-PRINCIPAL"></textarea>
+        </div>
+        <div class="CONTENEDOR-BOTONES">
+            <button onclick="btn1Encriptar()" class="color">Encriptar</button>
+            <button onclick="btn2Desencriptar()" class="color1">Desencriptar</button>
+        </div>
+
+        <div class="CONTENEDOR-SECUNDARIO">
+            <textarea id="txtdesencriptar" name="mensaje" class="CONTENEDOR-TEXTAREA-COPIAR"></textarea>
+        </div>
+        <div class="ADVERTENCIA">
+            <img src="./ICONO.png" class="ICONO1">
+            <p class="color3 ">Solo letras minúsculas y sin acentos.</p>
+        </div>
+
+
+        <div id="divsecundario" class="CONTENEDOR-IMAGEN2">
+            <img src="./txtnofound.png" class="IMAGE2">
+            <h1 class="CONTENEDOR-MENSAJE">Ningun mensaje fue </h1>
+            <h1 class="CONTENEDOR-MENSAJE1">encontrado</h1>
+            <h4 class="CONTENEDOR-MENSAJE2">Ingresa el texto que desees encriptar o</h4>
+            <h4 class="CONTENEDOR-MJ2">desencriptar.</h4>
+
+
+        </div>
+        <div class="CONTENEDOR-IMAGEN2">
+            <button id="bttnCopiar" class="color2" onclick="copy()">Copiar</button>
+        </div>
+
+    </div>
+    <script>
+        function btn1Encriptar() {
+            if (Validartexto() == 1) {
+                encriptar()
+            }
+        }
+        function btn2Desencriptar() {
+            if (Validartexto() == 1) {
+                desencriptar()
+            }
+        }
+        function btn3Copiar() {
+            if (Validartexto() == 1) {
+                encriptar()
+            }
+        }
+        function encriptar() {
+            var Texto = document.getElementById("txtencriptar").value;
+            let arr = new Array();
+            arr = Texto.split("")
+            let final = new Array();
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == "a") {
+                    arr[i] = "ai"
+                }
+                if (arr[i] == "e") {
+                    arr[i] = "enter"
+                }
+                if (arr[i] == "i") {
+                    arr[i] = "imes"
+                }
+                if (arr[i] == "o") {
+                    arr[i] = "ober"
+                }
+                if (arr[i] == "u") {
+                    arr[i] = "ufat"
+                }
+            }
+            final = arr.join('')
+            Enviarvalor(final)
+
+        }
+        function desencriptar() {
+            var Texto = document.getElementById("txtencriptar").value;
+            Texto = Texto
+                .replace(/ai/g, "a")
+                .replace(/enter/g, "e")
+                .replace(/imes/g, "i")
+                .replace(/ober/g, "o")
+                .replace(/ufat/g, "u");
+            Enviarvalor(Texto)
+
+        }
+
+        function Enviarvalor(texto) {
+            document.getElementById("txtdesencriptar").value = texto;
+        }
+
+        function ocultar(id) {
+            var elemento = document.getElementById(id);
+            elemento.style.display = "none";
+        }
+
+        function mostrar(id) {
+            var elemento = document.getElementById(id);
+            elemento.style.display = "inline";
+        }
+
+        function Validartexto() {
+            var val = 0
+            var Texto = document.querySelector("textarea");
+            if (Texto.value == "" || Texto.value == "Ingrese el texto aqui") {
+                ocultar("bttnCopiar")
+                mostrar("divsecundario")
+                document.getElementById("txtdesencriptar").value = "";
+                val = 0
+            } else {
+                mostrar("txtdesencriptar")
+                ocultar("divsecundario")
+                mostrar("bttnCopiar")
+                document.getElementById("txtdesencriptar").value = "";
+                val = 1
+            }
+
+            return val
+        }
+
+        function sololetras(e) {
+
+            key = e.keyCode || e.which;
+
+            teclado = String.fromCharCode(key).toLowerCase();
+
+            letras = " abcdefghijklmnñopqrstuvwxyz";
+
+            especiales = "8-37-38-46-164";
+
+            teclado_especial = false;
+
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                    break;
+
+
+                }
+
+
+            }
+            if (letras.indexOf(teclado) == -1 && !teclado_especial ) {
+                return false;
+
+
+            }
+
+
+
+        }
+
+
+        function copy() {
+            let copyText = document.querySelector("#txtdesencriptar");
+            copyText.select();
+            document.execCommand("copy");
+        }
+
+
+
+
+
+        ocultar("txtdesencriptar")
+        ocultar("bttnCopiar")
+        ocultar("divsecundario")
+
+
+
+    </script>
+
+
+</body>
+
+</html>
